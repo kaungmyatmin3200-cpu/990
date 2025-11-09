@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌸 SMTHH IS COMINGGG  🌸</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- First Screen -->
+  <div class="card" id="mainCard">
+    <img src="img/20221204075610_file_638cfb5a88f4f_638cfdab3d2f5.avif" alt="Flower" class="flower-img">
+    <h1>💐 FLOWERRR FOR YOUUU 💐</h1>
+    <p>HEYYY I MAKE SMTHH FOR YOU HEHE 🥺👉👈</p>
+    <p>I CAN'T SEND YOU THE REAL FLOWER SO I MADE THIS ONEE FORR YOUUUU😛🫵🏻.</p>
+    <p>WOULD TAKE THIS FLOWER?🥺🥺😭</p>
+    <div class="buttons">
+      <button onclick="accept()">Yes 💕</button>
+      <button onclick="decline()">No 😭</button>
+     </div>
+   </div>
+
+  <!-- YES Screen -->
+  <div class="thankyou-screen" id="thankYou" style="display: none;">
+    <img src="img/Mochi Peach Cat Cat Sticker - Mochi Peach Cat Cat Cute - Discover & Share GIFs.gif" alt="Thank You Flower" class="thank-img">
+    <h1>THANKK YOUU! 💗</h1>
+    <p>I HOPE YOU ENJOY ITTTT🌷💖</p>
+  </div>
+
+  <!-- NO Screen -->
+  <div class="decline-screen" id="declineScreen" style="display: none;">
+    <img src="img/sadmochi.gif.gif" alt="Sad Flower" class="thank-img">
+    <h1>THATT'S OKAYYY  </h1>
+    <p>I HOPEE YOU WOULDD TAKE NEXT TIMEE:( BTWW THANK YOUU FORRR YOURR TIMEEE</p>
+  </div>
+
+  <script>
+    function accept() { 
+      const mainCard = document.getElementById('mainCard');
+      const thankYou = document.getElementById('thankYou');
+
+      mainCard.style.opacity = '0';
+      setTimeout(() => {
+        mainCard.style.display = 'none';
+        thankYou.style.display = 'block';
+        thankYou.style.opacity = '0';
+        setTimeout(() => {
+          thankYou.style.opacity = '1';
+        }, 100);
+      }, 500);
+    }
+
+    function decline() {
+      const mainCard = document.getElementById('mainCard');
+      const declineScreen = document.getElementById('declineScreen');
+
+      mainCard.style.opacity = '0';
+      setTimeout(() => {
+        mainCard.style.display = 'none';
+        declineScreen.style.display = 'block';
+        declineScreen.style.opacity = '0';
+        setTimeout(() => {
+          declineScreen.style.opacity = '1';
+      }, 100);
+      }, 500);
+    }
+  </script>
+  <button id="playBtn" onclick="document.getElementById('bgmusic').play()">
+    FISRTT CLICKK HERE TO GET SMTHHH FUNNN HEEHEH
+  </button>
+
+  <audio id="bgmusic" loop>
+    <source src="P.S. I LOVE YOU.m4a" type="audio/mpeg">
+  </audio>
+</body>
+</html>
+
